@@ -29,7 +29,7 @@ export default function About() {
         <Col>
         {teamSections.map((section, sectionIndex) => (
           <Row key={sectionIndex} className='m-5'>
-            <Col>
+            <Col className='border-top'>
               <h2 className='text-center justify-content-center m-5'>{section.sectionTitle}</h2>
               <Row className='justify-content-evenly'>
                 {section.members.map((member, memberIndex) => (

@@ -2,7 +2,7 @@ import { Container, Row, Col, Form, Button, Nav } from 'react-bootstrap';
 
 export default function Footer() {
   return (
-    <footer className='py-5'>
+    <footer className='py-5 border-top'>
       <Container>
         <Row className='justify-content-between'>
           <Col xs={6} md={2} className='mb-3'>
@@ -33,8 +33,10 @@ export default function Footer() {
               <div className='d-flex flex-column flex-sm-row w-100 gap-2'>
                 <Form.Control
                   type='email'
+                  id='email'
                   placeholder='Adresse email'
                   aria-label='Email address'
+                  autoComplete='email'
                   className='form-control'
                 />
                 <Button variant='primary' type='button'>S'inscrire</Button>
@@ -47,7 +49,14 @@ export default function Footer() {
           <p>Copyright &copy; Viraj H2 2024</p>
           <ul className='list-unstyled d-flex'>
             <li className='ms-3'>
-              <a className='link-body-emphasis' href='#'><svg className='bi' width='24' height='24'><use xlinkHref='#linkedin'/></svg></a>
+              <a href='https://www.linkedin.com/company/your-company' target='_blank' rel='noopener noreferrer' className='link-body-emphasis'>
+                <img 
+                  src='/assets/icons/linkedin.svg' 
+                  alt='LinkedIn' 
+                  width='32' 
+                  height='32' 
+                />
+              </a>
             </li>
           </ul>
         </div>

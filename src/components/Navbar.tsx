@@ -9,7 +9,7 @@ export default function Navbar() {
     <Bnavbar {...(isHomePage ? { fixed: 'top' } : { sticky: 'top' })} expand='sm' bg='body'>
       <Container fluid>
         <Bnavbar.Brand as={Link} to='/'>
-          <img src='/assets/images/favicon.svg' style={{ maxHeight: '40px' }} />
+          <img src='/assets/icons/favicon.svg' style={{ maxHeight: '40px' }} />
         </Bnavbar.Brand>
         <Bnavbar.Toggle />
         <Bnavbar.Collapse className='justify-content-end'>
