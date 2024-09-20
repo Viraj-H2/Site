@@ -1,9 +1,13 @@
-import { Navbar as Bnavbar, Button, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Navbar as Bnavbar, Button, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { ThemeContext } from '../contexts/ThemeContext';
+import capitalize from '../utils/capitalize';
 
 export default function Navbar() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <Bnavbar {...(isHomePage ? { fixed: 'top' } : { sticky: 'top' })} expand='sm' bg='body'>
@@ -25,6 +29,11 @@ export default function Navbar() {
             <NavDropdown title='🇫🇷'>
               <NavDropdown.Item href='#action/en'>🇬🇧</NavDropdown.Item>
               <NavDropdown.Item href='#action/fr'>🇫🇷</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title={capitalize(theme)}>
+              <NavDropdown.Item onClick={() => setTheme('light')}>Light</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setTheme('dark')}>Dark</NavDropdown.Item>
+              <NavDropdown.Item onClick={() => setTheme('auto')}>Auto</NavDropdown.Item>
             </NavDropdown>
             <Button href='mailto:contact@viraj-h2.com?subject=Demande%20de%20contact' variant='outline-primary'>Nous contacter</Button>
           </Nav>

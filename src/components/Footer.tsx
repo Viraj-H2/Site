@@ -49,7 +49,7 @@ export default function Footer() {
           <p>Copyright &copy; Viraj H2 2024</p>
           <ul className='list-unstyled d-flex'>
             <li className='ms-3'>
-              <a href='https://www.linkedin.com/company/your-company' target='_blank' rel='noopener noreferrer' className='link-body-emphasis'>
+              <a href='https://www.linkedin.com/company/viraj-h2' target='_blank' rel='noopener noreferrer' className='link-body-emphasis'>
                 <img 
                   src='/assets/icons/linkedin.svg' 
                   alt='LinkedIn' 
