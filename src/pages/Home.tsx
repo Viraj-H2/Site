@@ -1,27 +1,23 @@
-import { Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Image, Row } from 'react-bootstrap';
 
 export default function Home() {
   return (
-    <>
-    <Container fluid className='d-flex justify-content-center align-items-center vh-100 position-fixed top-0'
-    >
-      <video autoPlay loop muted disablePictureInPicture playsInline
-        className='position-absolute w-100 h-100'
-        style={{ pointerEvents: 'none', objectFit: 'cover', zIndex: 0, opacity: 0.85 }}
-      >
-        <source src='/mountains.mp4' type='video/mp4' />
-        <img src='/mountains.png' className='position-absolute w-100 h-100' style={{ objectFit: 'cover', zIndex: 0 }} />
-      </video>
-      <Row className='text-center' style={{ maxWidth: '80%', zIndex: 1 }}>
-        <Image src='/logo.svg' />
-        <div style={{ height: '4rem' }} />
-        <h1 className='text-light'>🚧 This website is under construction 🛠️</h1>
+    <Container fluid className='p-0'>
+      <Row className='m-0'>
+        <Col className='p-0'>
+          <video autoPlay loop muted disablePictureInPicture playsInline className='w-100 vh-100' style={{ pointerEvents: 'none', objectFit: 'cover', opacity: 0.85 }}>
+            <source src='/assets/videos/background.mp4' type='video/mp4' />
+            <Image src='/assets/images/background.png' className='img-fluid vw-100 vh-100' style={{ objectFit: 'cover' }} />
+          </video>
+          <Row className='m-0'>
+            <Col className='dflex position-absolute top-50 start-50 translate-middle text-center'>
+              <Image src='/assets/images/logo.svg' alt='Logo' className='img-fluid w-75 mb-4' />
+              <h1 className='text-light mb-4'>Accélérons la décarbonation de l'aérien</h1>
+              <Button href='/concept' className='mt-2'>Découvrir notre concept</Button>
+            </Col>
+          </Row>
+        </Col>
       </Row>
     </Container>
-    <Container fluid className='d-flex justify-content-center align-items-center'>
-      <h1 className='text-light'>This is a test heading</h1>
-      <p className='text-light'>This is a test paragraph</p>
-    </Container>
-    </>
-  )
+  );
 }
