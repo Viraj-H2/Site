@@ -22,7 +22,7 @@ export default function TeamMember({ photo, name, position, linkedin }: TeamMemb
             <Card.Text>{position}</Card.Text>
           </Col>
           {linkedin && (
-            <Col md='auto' className='d-flex align-items-center'>
+            <Col className='d-flex align-items-center' xs='auto'>
               <Card.Link href={'https://www.linkedin.com/in/' + linkedin} target='_blank'>
                 <img src='/assets/icons/linkedin.svg' alt='LinkedIn' width='32' height='32' />
               </Card.Link>
