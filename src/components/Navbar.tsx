@@ -21,7 +21,7 @@ export default function Navbar() {
             <NavDropdown title='À propos'>
               <NavDropdown.Item as={Link} to='/about#team'>L'équipe</NavDropdown.Item>
               <NavDropdown.Item as={Link} to='/about#sponsors'>Soutiens</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/about#newsletter'>Newsletter</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to='/about#press'>Presse</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to='/concept'>Notre concept</Nav.Link>
             <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
