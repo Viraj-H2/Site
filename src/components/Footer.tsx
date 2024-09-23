@@ -1,6 +1,20 @@
+import { useState } from 'react';
 import { Container, Row, Col, Form, Button, Nav } from 'react-bootstrap';
 
 export default function Footer() {
+  const [validated, setValidated] = useState(false);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
+
+
   return (
     <footer className='py-5 border-top'>
       <Container>
@@ -27,7 +41,7 @@ export default function Footer() {
           </Col>
 
           <Col md={5} className='offset-md-1 mb-3'>
-            <Form>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
               <h5>S'inscrire à la newsletter</h5>
               <p>Recevez de nos nouvelles chaque trimestre !</p>
               <div className='d-flex flex-column flex-sm-row w-100 gap-2'>
@@ -38,8 +52,9 @@ export default function Footer() {
                   aria-label='Email address'
                   autoComplete='email'
                   className='form-control'
+                  required
                 />
-                <Button variant='primary' type='button'>S'inscrire</Button>
+                <Button variant='primary' type='submit'>S'inscrire</Button>
               </div>
             </Form>
           </Col>
