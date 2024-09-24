@@ -14,7 +14,7 @@ interface TeamSection {
   members: TeamMemberData[];
 }
 
-export default function About() {
+export default function Team() {
   const [teamSections, setTeamSections] = useState<TeamSection[]>([]);
 
   useEffect(() => {

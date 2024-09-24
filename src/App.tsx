@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import About from './pages/About';
 import Concept from './pages/Concept';
 import Error404 from './pages/Error404'
 import Footer from './components/Footer';
@@ -7,6 +6,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar'
 import News from './pages/News';
 import Careers from './pages/Careers';
+import Team from './pages/Team';
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/team' element={<Team />} />
         <Route path='/concept' element={<Concept />} />
         <Route path='/careers' element={<Careers />} />
         <Route path='/news' element={<News />} />
