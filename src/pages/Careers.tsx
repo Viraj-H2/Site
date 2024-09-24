@@ -28,11 +28,11 @@ export default function Careers() {
     fetch('/assets/json/jobs.json')
       .then(response => response.json())
       .then((data: JobType[]) => {
-        setJobs(data);
+        setJobs(data.sort((a, b) => a.title.localeCompare(b.title)));
         setFilteredJobs(data);
-        setDepartments([...new Set(data.map(job => job.department))]);
-        setLocations([...new Set(data.map(job => job.location))]);
-        setTypes([...new Set(data.map(job => job.type))]);
+        setDepartments([...new Set(data.map(job => job.department))].sort());
+        setLocations([...new Set(data.map(job => job.location))].sort());
+        setTypes([...new Set(data.map(job => job.type))].sort());
       });
   }, []);
 
