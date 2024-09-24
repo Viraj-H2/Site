@@ -15,7 +15,7 @@ export const ThemeContext = createContext<ThemeContextProps>({
 });
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('auto');
+  const [theme, setTheme] = useState<Theme>('light');
   const [systemTheme, setSystemTheme] = useState<Theme>('light');
 
   useEffect(() => {
