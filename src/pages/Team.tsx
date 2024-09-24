@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import TeamMember from '../components/TeamMember';
+import { Link } from 'react-router-dom';
 
 interface TeamMemberData {
   photo: string;
@@ -25,12 +26,12 @@ export default function Team() {
 
   return (
     <Container fluid>
-      <Row className=''>
+      <Row>
         <Col>
           {teamSections.map((section, sectionIndex) => (
             <Row key={sectionIndex} className='m-5'>
               <Col className='border-top'>
-                <h2 className='text-center justify-content-center m-5'>{section.sectionTitle}</h2>
+                <h2 className='m-4 text-center justify-content-center'>{section.sectionTitle}</h2>
                 <Row className='justify-content-evenly'>
                   {section.members.map((member, memberIndex) => (
                     <TeamMember key={memberIndex} {...member} />
@@ -39,6 +40,13 @@ export default function Team() {
               </Col>
             </Row>
           ))}
+        </Col>
+      </Row>
+      <Row className='m-5'>
+        <Col className='border-top text-center justify-content-center'>
+          <h2 className='m-4'>Nous rejoindre</h2>
+          <p className='m-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium euismod ligula. Fusce pretium interdum nisi, et malesuada enim congue ac. Proin eget eros vel risus porttitor vestibulum eget et enim. Ut pretium tellus nisi, a elementum dui blandit eget. Donec ornare pretium nunc a interdum. Fusce est dolor, finibus non purus vitae, egestas interdum augue. Duis non consectetur leo. Curabitur placerat luctus magna consectetur egestas.</p>
+          <Button as='a' href='/careers' size='lg'>Postuler maintenant</Button>
         </Col>
       </Row>
     </Container>
