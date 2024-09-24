@@ -10,6 +10,14 @@ export default function Home() {
       .then(data => setSponsors(data));
   }, []);
 
+  const scrollToConcept = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault();
+    const concept = document.getElementById('concept');
+    if (concept) {
+      concept.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <Container fluid className='p-0'>
       <Row className='m-0'>
@@ -22,12 +30,17 @@ export default function Home() {
             <Col className='dflex position-absolute top-50 start-50 translate-middle text-center'>
               <Image src='/assets/images/logo.svg' alt='Logo' className='img-fluid w-75 mb-4' />
               <h1 className='text-light mb-4'>Accélérons la décarbonation de l'aérien</h1>
-              <Button href='/concept' className='mt-2'>Découvrir notre concept</Button>
+              <Button as="a" href="#concept" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => scrollToConcept(e)} className='mt-2'>Découvrir notre concept</Button>
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row key='#sponsors' className='m-5'>
+      <Row className='m-5' id='concept'>
+        <Col className='text-center justify-content-evenly'>
+          <Image src='/assets/images/concept.png' className='img-fluid w-75' alt='Concept' />
+        </Col>
+      </Row>
+      <Row id='sponsors' className='m-5'>
         <Col className='border-top'>
         <h2 className='text-center justify-content-center m-5'>Ils nous soutiennent</h2>
         <Row className='justify-content-evenly'>
