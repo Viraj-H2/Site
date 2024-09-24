@@ -14,7 +14,7 @@ const articles = {
   }
 };
 
-export default function News() {
+export default function Blog() {
   return (
     <Container fluid>
       <Stack direction='vertical' gap={3} className='p-5'>

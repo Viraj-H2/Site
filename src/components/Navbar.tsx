@@ -22,7 +22,7 @@ export default function Navbar() {
             <Nav.Link as={Link} to='/team'>L'équipe</Nav.Link>
             <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
             <Nav.Link as={Link} to='/press'>Presse</Nav.Link>
-            <Nav.Link as={Link} to='/news'>Annonces</Nav.Link>
+            <Nav.Link as={Link} to='/'>Blog</Nav.Link>
             <NavDropdown title='🇫🇷'>
               <NavDropdown.Item href='#action/en'>🇬🇧</NavDropdown.Item>
               <NavDropdown.Item href='#action/fr'>🇫🇷</NavDropdown.Item>
