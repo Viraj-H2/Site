@@ -14,13 +14,6 @@ interface TeamSection {
   members: TeamMemberData[];
 }
 
-const sponsors = [
-  "fondation_jjll.png",
-  "isae_supaero.png",
-  "we_spark_the_future.jpg",
-  "fondation_isae_supaero.svg"
-];
-
 export default function About() {
   const [teamSections, setTeamSections] = useState<TeamSection[]>([]);
 
@@ -46,18 +39,6 @@ export default function About() {
               </Col>
             </Row>
           ))}
-          <Row key='#sponsors' className='m-5'>
-              <Col className='border-top'>
-              <h2 className='text-center justify-content-center m-5'>Ils nous soutiennent</h2>
-              <Row className='justify-content-evenly'>
-                {sponsors.map((sponsor, index) => (
-                  <Col key={index} xs={4} md={2} className='text-center'>
-                    <img src={`/assets/images/sponsors/${sponsor}`} alt={sponsor} className='img-fluid' />
-                  </Col>
-                ))}
-                </Row>
-              </Col>
-            </Row>
         </Col>
       </Row>
     </Container>
