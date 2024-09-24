@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import TeamMember from '../components/TeamMember';
-import { Link } from 'react-router-dom';
 
 interface TeamMemberData {
   photo: string;
