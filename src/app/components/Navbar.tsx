@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar as Bnavbar, Button, Container, Nav, NavDropdown } from 'react-bootstrap';
-import { ThemeContext } from '../contexts/ThemeContext';
-import capitalize from '../utils/capitalize';
+import { ThemeContext } from '../../contexts/ThemeContext';
+import capitalize from '../../utils/capitalize';
 
 export default function Navbar() {
   const location = useLocation();

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import TeamMember from '../components/TeamMember';
+import TeamMember from './components/TeamMember';
 
 interface TeamMemberData {
   photo: string;

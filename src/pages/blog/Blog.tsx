@@ -1,5 +1,5 @@
 import { Container, Stack } from 'react-bootstrap';
-import Article from '../components/Article';
+import Article from './components/Article';
 
 const articles = {
   '2024-01-01': {

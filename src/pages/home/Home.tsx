@@ -1,7 +1,7 @@
 import { faBolt, faCoins, faDroplet, faFeather } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import { Button, Col, Container, Image, Row } from 'react-bootstrap';
-import SystemProps from '../components/SystemProp';
+import SystemProps from './components/SystemProp';
 
 export default function Home() {
   const [sponsors, setSponsors] = useState<string[]>([]);

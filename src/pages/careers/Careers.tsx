@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Form, Accordion } from 'react-bootstrap';
-import Job from '../components/Job';
+import Job from './components/Job';
 
 interface JobType {
   id: number;
