@@ -18,14 +18,11 @@ export default function Navbar() {
         <Bnavbar.Toggle />
         <Bnavbar.Collapse className='justify-content-end'>
           <Nav>
-            <NavDropdown title='À propos'>
-              <NavDropdown.Item as={Link} to='/about#sponsors'>Soutiens</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to='/about#press'>Presse</NavDropdown.Item>
-            </NavDropdown>
             <Nav.Link as={Link} to='/concept'>Notre concept</Nav.Link>
             <Nav.Link as={Link} to='/team'>L'équipe</Nav.Link>
             <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
-            <Nav.Link as={Link} to='/news'>Actualités</Nav.Link>
+            <Nav.Link as={Link} to='/press'>Presse</Nav.Link>
+            <Nav.Link as={Link} to='/news'>Annonces</Nav.Link>
             <NavDropdown title='🇫🇷'>
               <NavDropdown.Item href='#action/en'>🇬🇧</NavDropdown.Item>
               <NavDropdown.Item href='#action/fr'>🇫🇷</NavDropdown.Item>

@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import News from './pages/News';
 import Careers from './pages/Careers';
 import Team from './pages/Team';
+import Press from './pages/Press';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path='/concept' element={<Concept />} />
         <Route path='/careers' element={<Careers />} />
         <Route path='/news' element={<News />} />
+        <Route path='/press' element={<Press />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
       <Footer />
