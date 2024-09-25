@@ -37,21 +37,21 @@ export default function Home() {
           </Row>
         </Col>
       </Row>
-      <Row id='concept' className='m-1 p-5'>
+      <Row id='concept' className='m-0 p-5'>
         <Col className='border-top' />
       </Row>
-      <Row className='mb-5'>
+      <Row className='m-0 mb-5'>
         <Col className='text-center justify-content-evenly'>
           <Image src='/assets/images/concept.png' className='img-fluid w-75' alt='Concept' />
         </Col>
       </Row>
-      <Row>
+      <Row className='m-0 mb-4'>
         <SystemProps icon={faBolt} title='Efficace' description="En plus de l'adéquation de la turbine ou de la pile en fonction des phases de vol, la récupération de vapeur et chaleur dope l'efficacité" />
         <SystemProps icon={faFeather} title='Léger' description="Une densité de puissance améliorée grâce à la synergie entre pile à combustible et turboprop" />
         <SystemProps icon={faDroplet} title='Propre' description="L'injection de vapeur réduit jusqu'à dix fois les émissions de NOx, oxydes d'azote qui participent au forçage radiatif" />
         <SystemProps icon={faCoins} title='Economique' description="L'hybridation permettra d'emporter moins d'hydrogène, ce qui diminue le coût de sa consommation et libère de la place pour plus de passagers" />
       </Row>
-      <Row id='sponsors' className='m-5'>
+      <Row id='sponsors' className='m-0 mb-4'>
         <Col className='border-top'>
         <h2 className='text-center justify-content-center m-5'>Ils nous soutiennent</h2>
         <Row className='justify-content-evenly'>
