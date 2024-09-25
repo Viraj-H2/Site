@@ -92,13 +92,13 @@ export default function Footer() {
           </Col>
         </Row>
 
-        <Row className='justify-content-evenly border-top p-2'>
-          <Col className='d-flex justify-content-start p-0'>
-            <p>&copy; 2024 Viraj H2. Tous droits réservés.</p>
+        <Row className="border-top py-3 mt-4 align-items-center">
+          <Col xs={12} sm className="text-center text-sm-start mb-2 mb-sm-0">
+            <p className="mb-0">&copy; 2024 Viraj H2. Tous droits réservés.</p>
           </Col>
-          <Col className='d-flex justify-content-end p-0'>
-            <a href='https://www.linkedin.com/company/viraj-h2' target='_blank' rel='noopener noreferrer' className='text-dark'>
-              <FontAwesomeIcon icon={faLinkedin} size='2xl' />
+          <Col xs={12} sm="auto" className="text-center text-sm-end">
+            <a href="https://www.linkedin.com/company/viraj-h2" target="_blank" rel="noopener noreferrer" className="text-dark">
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </Col>
         </Row>
