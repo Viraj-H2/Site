@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Getting Started with React",
+    "description": "A beginner's guide to React development",
+    "preview": "/images/react-preview.jpg",
+    "authors": ["John Doe", "Jane Smith"],
+    "category": "Web Development",
+    "tags": ["React", "JavaScript", "Frontend"],
+    "date": "2024-01-01",
+    "content": "getting-started-with-react.md"
+  },
+  {
+    "id": "2",
+    "title": "Advanced CSS Techniques",
+    "description": "Explore advanced CSS techniques for modern web design",
+    "preview": "/images/css-preview.jpg",
+    "authors": ["Alice Johnson"],
+    "category": "Web Design",
+    "tags": ["CSS", "Web Design", "Frontend"],
+    "date": "2024-01-02",
+    "content": "advanced-css-techniques.md"
+  },
+  {
+    "id": "3",
+    "title": "Introduction to TypeScript",
+    "description": "Learn the basics of TypeScript and its benefits",
+    "preview": "/images/typescript-preview.jpg",
+    "authors": ["Bob Williams", "Charlie Brown"],
+    "category": "Programming Languages",
+    "tags": ["TypeScript", "JavaScript", "Web Development"],
+    "date": "2024-01-03",
+    "content": "introduction-to-typescript.md"
+  }
+]
