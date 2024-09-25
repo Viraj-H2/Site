@@ -18,6 +18,7 @@ export default function Navbar() {
         <Bnavbar.Toggle />
         <Bnavbar.Collapse className='justify-content-end'>
           <Nav>
+            <Nav.Link as={Link} to='/'>Accueil</Nav.Link>
             <Nav.Link as={Link} to='/concept'>Notre concept</Nav.Link>
             <Nav.Link as={Link} to='/team'>L'équipe</Nav.Link>
             <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
