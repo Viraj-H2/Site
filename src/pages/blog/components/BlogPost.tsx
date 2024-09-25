@@ -1,55 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { Container, Row, Col, Image, Spinner } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import { Container, Row, Col, Image, Spinner, Alert } from 'react-bootstrap';
 import Markdown from 'react-markdown';
+import Post from '../interfaces/Post';
 
-interface Post {
-  id: string;
-  title: string;
-  description: string;
-  preview: string;
-  authors: string[];
-  category: string;
-  tags: string[];
-  date: string;
-  content: string;
-}
-
-const BlogPost: React.FC = () => {
-  const { title } = useParams<{ title: string }>();
+export default function BlogPost() {
   const [post, setPost] = useState<Post | null>(null);
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    fetchPost();
-  }, [title]);
+    const encodedTitle = window.location.pathname.split('/').pop();
+    if (!encodedTitle)
+      return;
+    const targetTitle = decodeURIComponent(encodedTitle);
+    fetch('/assets/json/posts.json')
+      .then(response => response.json())
+      .then((data: Post[]) => {
+        const targetPost = data.find(post => post.title === targetTitle);
+        if (targetPost) {
+          setPost(targetPost);
+          fetch(`/assets/md/${targetPost.content}`)
+            .then(response => response.text())
+            .then(data => setContent(data));
+        }
+      });
+  }, []);
 
-  const fetchPost = async () => {
-    try {
-      const response = await fetch('/json/posts.json');
-      const data = await response.json();
-      const foundPost = data.posts.find((p: Post) => 
-        p.title.toLowerCase().replace(/\s+/g, '-') === title
-      );
-      
-      if (foundPost) {
-        setPost(foundPost);
-        const contentResponse = await fetch(`/md/${foundPost.content}`);
-        const contentText = await contentResponse.text();
-        setContent(contentText);
-      }
-    } catch (error) {
-      console.error('Error fetching post:', error);
-    }
-  };
-
-  if (!post) {
+  if (!post)
     return (
-      <Spinner animation='border' role='status'>
-        <span className='visually-hidden'>Loading...</span>
-      </Spinner>
+      <Container className='text-center'>
+        <Spinner animation='border' role='status' />
+      </Container>
     );
-  }
+
+  if (!content)
+    return (
+      <Container className='text-center'>
+        <Alert variant='danger'>Failed to load post content</Alert>
+      </Container>
+    );
 
   return (
     <Container className='mt-5'>
@@ -72,5 +60,3 @@ const BlogPost: React.FC = () => {
     </Container>
   );
 };
-
-export default BlogPost;

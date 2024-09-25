@@ -1,17 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
-interface Post {
-  title: string;
-  description: string;
-  preview: string;
-  authors: string[];
-  category: string;
-  tags: string[];
-  date: string;
-  content: string;
-}
+import Post from './interfaces/Post';
 
 export default function Blog() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -29,8 +19,8 @@ export default function Blog() {
       <h1 className='mb-4'>Blog</h1>
 
       <Row>
-        {posts.map(post => (
-          <Col md={4} className='mb-4'>
+        {posts.map((post, index) => (
+          <Col key={index} md={4} className='mb-4'>
             <Card>
               <Card.Img variant='top' src={post.preview} />
               <Card.Body>
