@@ -53,13 +53,13 @@ export default function Home() {
       </Row>
       <Row id='sponsors' className='m-0 mb-4'>
         <Col className='border-top'>
-        <h2 className='text-center justify-content-center m-5'>Ils nous soutiennent</h2>
-        <Row className='justify-content-evenly'>
-          {sponsors.map((sponsor, index) => (
-            <Col key={index} xs={4} md={2} className='text-center'>
-              <img src={`/assets/images/sponsors/${sponsor}`} alt={sponsor} className='img-fluid' />
-            </Col>
-          ))}
+          <h2 className='text-center justify-content-center m-5'>Ils nous soutiennent</h2>
+          <Row className='justify-content-evenly'>
+            {sponsors.map((sponsor, index) => (
+              <Col key={index} xs={4} md={2} className='m-2 p-2 d-flex align-items-center'>
+                <img src={`/assets/images/sponsors/${sponsor}`} alt={sponsor} className='img-fluid' />
+              </Col>
+            ))}
           </Row>
         </Col>
       </Row>
