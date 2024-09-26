@@ -97,7 +97,7 @@ export default function Footer() {
             <p className="mb-0">&copy; 2024 Viraj H2. Tous droits réservés.</p>
           </Col>
           <Col xs={12} sm="auto" className="text-center text-sm-end">
-            <a href="https://www.linkedin.com/company/viraj-h2" target="_blank" rel="noopener noreferrer" className="text-dark">
+            <a href="https://www.linkedin.com/company/viraj-h2" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
           </Col>

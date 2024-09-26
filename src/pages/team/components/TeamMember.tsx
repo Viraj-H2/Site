@@ -1,3 +1,5 @@
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Card, Col, Row } from 'react-bootstrap';
 
 interface TeamMemberProps {
@@ -24,7 +26,7 @@ export default function TeamMember({ photo, name, position, linkedin }: TeamMemb
           {linkedin && (
             <Col className='d-flex align-items-center' xs='auto'>
               <Card.Link href={'https://www.linkedin.com/in/' + linkedin} target='_blank'>
-                <img src='/assets/icons/linkedin.svg' alt='LinkedIn' width='32' height='32' />
+                <FontAwesomeIcon icon={faLinkedin} size='2x' />
               </Card.Link>
             </Col>
           )}
