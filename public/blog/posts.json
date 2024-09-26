@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Getting Started with React",
+    "description": "A beginner's guide to React development",
+    "authors": ["John Doe", "Jane Smith"],
+    "category": "Web Development",
+    "tags": ["React", "JavaScript", "Frontend"],
+    "date": "2024-01-01",
+    "content_dir": "getting_started_with_react",
+    "preview": "images/preview.jpg"
+  }
+]

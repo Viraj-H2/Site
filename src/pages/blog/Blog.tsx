@@ -14,7 +14,7 @@ export default function Blog() {
         {posts.map((post, index) => (
           <Col key={index} md={4} className='mb-4'>
             <Card>
-              <Card.Img variant='top' src={post.preview} />
+              <Card.Img variant='top' src={`/blog/${post.content_dir}/${post.preview}`} />
               <Card.Body>
                 <Card.Title>{post.title}</Card.Title>
                 <Card.Text>{post.description}</Card.Text>

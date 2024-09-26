@@ -17,7 +17,7 @@ export default function BlogPost() {
     const targetPost = posts.find(post => post.title === targetTitle);
     if (targetPost) {
       setPost(targetPost);
-      fetch(`/assets/md/${targetPost.content}`)
+      fetch(`/blog/${targetPost.content_dir}/post.md`)
         .then(response => {
           if (response.headers.get('content-type')?.includes('text/html'))
             return '';
@@ -40,7 +40,6 @@ export default function BlogPost() {
               {post.authors.join(', ')} | {post.date} | {post.category}
             </small>
           </p>
-          <Image src={post.preview} fluid className='mb-4' />
           <Markdown>{content}</Markdown>
           <div className='mt-4'>
             <strong>Tags: </strong>
