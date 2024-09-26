@@ -71,7 +71,7 @@ export default function Footer() {
             </Nav>
           </Col>
 
-          <Col>
+          <Col sm={4} className='min-width-col'>
             <h5 className='text-uppercase mb-3'>Newsletter</h5>
             <p>Restez informé de nos dernières actualités</p>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
