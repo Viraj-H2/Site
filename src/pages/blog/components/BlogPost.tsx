@@ -1,43 +1,34 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Image, Spinner, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import Markdown from 'react-markdown';
 import Post from '../interfaces/Post';
+import { usePosts } from '../providers/PostsProvider';
+import Error404 from '../../Error404';
 
 export default function BlogPost() {
+  const { posts } = usePosts();
   const [post, setPost] = useState<Post | null>(null);
   const [content, setContent] = useState('');
 
   useEffect(() => {
     const encodedTitle = window.location.pathname.split('/').pop();
-    if (!encodedTitle)
-      return;
+    if (!encodedTitle) return;
     const targetTitle = decodeURIComponent(encodedTitle);
-    fetch('/assets/json/posts.json')
-      .then(response => response.json())
-      .then((data: Post[]) => {
-        const targetPost = data.find(post => post.title === targetTitle);
-        if (targetPost) {
-          setPost(targetPost);
-          fetch(`/assets/md/${targetPost.content}`)
-            .then(response => response.text())
-            .then(data => setContent(data));
-        }
-      });
-  }, []);
+    const targetPost = posts.find(post => post.title === targetTitle);
+    if (targetPost) {
+      setPost(targetPost);
+      fetch(`/assets/md/${targetPost.content}`)
+        .then(response => {
+          if (response.headers.get('content-type')?.includes('text/html'))
+            return '';
+          return response.text();
+        })
+        .then(data => setContent(data))
+        .catch(error => console.error(error));
+    }
+  }, [posts]);
 
-  if (!post)
-    return (
-      <Container className='text-center'>
-        <Spinner animation='border' role='status' />
-      </Container>
-    );
-
-  if (!content)
-    return (
-      <Container className='text-center'>
-        <Alert variant='danger'>Failed to load post content</Alert>
-      </Container>
-    );
+  if (!post || !content) return <Error404 />;
 
   return (
     <Container className='mt-5'>
@@ -59,4 +50,4 @@ export default function BlogPost() {
       </Row>
     </Container>
   );
-};
+}

@@ -1,23 +1,15 @@
-import { useState, useEffect } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Post from './interfaces/Post';
+import { usePosts } from './providers/PostsProvider';
 
 export default function Blog() {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const { posts } = usePosts();
 
-  useEffect(() => {
-    fetch('/assets/json/posts.json')
-      .then(response => response.json())
-      .then((data: Post[]) => {
-        setPosts(data);
-      });
-  }, []);
+  if (posts.length == 0) return <Spinner animation='border' role='status' />;
 
   return (
     <Container className='mt-5'>
       <h1 className='mb-4'>Blog</h1>
-
       <Row>
         {posts.map((post, index) => (
           <Col key={index} md={4} className='mb-4'>
@@ -41,4 +33,4 @@ export default function Blog() {
       </Row>
     </Container>
   );
-};
+}

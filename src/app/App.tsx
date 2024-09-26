@@ -9,6 +9,7 @@ import Home from '../pages/home/Home';
 import Press from '../pages/Press';
 import Team from '../pages/team/Team';
 import BlogPost from '../pages/blog/components/BlogPost';
+import { PostsProvider } from '../pages/blog/providers/PostsProvider';
 
 export default function App() {
   return (
@@ -20,9 +21,9 @@ export default function App() {
         <Route path='/press' element={<Press />} />
         <Route path='/team' element={<Team />} />
         <Route path='/careers' element={<Careers />} />
-        <Route path='/blog' element={<Blog />} />
+        <Route path="/blog" element={<PostsProvider><Blog /></PostsProvider>} />
+        <Route path="/blog/:title" element={<PostsProvider><BlogPost /></PostsProvider>} />
         <Route path='*' element={<Error404 />} />
-        <Route path="/blog/:title" element={<BlogPost />} />
       </Routes>
       <Footer />
     </Router>

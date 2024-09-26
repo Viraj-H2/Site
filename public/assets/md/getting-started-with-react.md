@@ -1,5 +1,3 @@
-# Getting Started with React
-
 React is a popular JavaScript library for building user interfaces. Whether you are a beginner or an experienced developer, getting started with React can be a smooth process. In this blog post, we will walk you through the essential steps to kickstart your journey with React.
 
 ## Step 1: Set Up Your Development Environment
