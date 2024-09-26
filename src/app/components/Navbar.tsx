@@ -22,7 +22,6 @@ export default function Navbar() {
             <Nav.Link as={Link} to='/concept'>Notre concept</Nav.Link>
             <Nav.Link as={Link} to='/team'>L'équipe</Nav.Link>
             <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
-            <Nav.Link as={Link} to='/press'>Presse</Nav.Link>
             <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
             <NavDropdown title={capitalize(theme)}>
               <NavDropdown.Item onClick={() => setTheme('light')}>Light</NavDropdown.Item>

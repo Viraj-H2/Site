@@ -6,7 +6,6 @@ import Careers from '../pages/careers/Careers';
 import Concept from '../pages/Concept';
 import Error404 from '../pages/Error404'
 import Home from '../pages/home/Home';
-import Press from '../pages/Press';
 import Team from '../pages/team/Team';
 import BlogPost from '../pages/blog/components/BlogPost';
 import { PostsProvider } from '../pages/blog/providers/PostsProvider';
@@ -18,7 +17,6 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/concept' element={<Concept />} />
-        <Route path='/press' element={<Press />} />
         <Route path='/team' element={<Team />} />
         <Route path='/careers' element={<Careers />} />
         <Route path="/blog" element={<PostsProvider><Blog /></PostsProvider>} />
