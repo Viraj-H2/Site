@@ -7,7 +7,7 @@ export default function Home() {
   const [sponsors, setSponsors] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch('/sponsors/sponsors.json')
+    fetch('/sponsors/data.json')
       .then(response => response.json())
       .then(data => setSponsors(data));
   }, []);

@@ -25,7 +25,7 @@ export default function Careers() {
   });
 
   useEffect(() => {
-    fetch('/careers/jobs.json')
+    fetch('/careers/data.json')
       .then(response => response.json())
       .then((data: JobType[]) => {
         setJobs(data.sort((a, b) => a.title.localeCompare(b.title)));

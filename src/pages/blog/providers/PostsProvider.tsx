@@ -15,7 +15,7 @@ export const PostsProvider = ({ children }: { children: ReactNode }) => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
-    fetch('/blog/posts.json')
+    fetch('/blog/data.json')
       .then(response => response.json())
       .then((data: Post[]) => setPosts(data));
   }, []);

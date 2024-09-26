@@ -18,7 +18,7 @@ export default function Team() {
   const [teamSections, setTeamSections] = useState<TeamSection[]>([]);
 
   useEffect(() => {
-    fetch('/team/team.json')
+    fetch('/team/data.json')
       .then(response => response.json())
       .then(data => setTeamSections(data));
   }, []);
