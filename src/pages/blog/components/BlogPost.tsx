@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Markdown from 'react-markdown';
 import Post from '../interfaces/Post';
 import { usePosts } from '../providers/PostsProvider';
