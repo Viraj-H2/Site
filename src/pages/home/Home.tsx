@@ -7,7 +7,7 @@ export default function Home() {
   const [sponsors, setSponsors] = useState<string[]>([]);
 
   useEffect(() => {
-    fetch('/assets/json/sponsors.json')
+    fetch('/sponsors/sponsors.json')
       .then(response => response.json())
       .then(data => setSponsors(data));
   }, []);
@@ -57,7 +57,7 @@ export default function Home() {
           <Row className='justify-content-evenly'>
             {sponsors.map((sponsor, index) => (
               <Col key={index} xs={4} md={2} className='m-2 p-2 d-flex align-items-center'>
-                <img src={`/assets/images/sponsors/${sponsor}`} alt={sponsor} className='img-fluid' />
+                <img src={`/sponsors/images/${sponsor}`} alt={sponsor} className='img-fluid' />
               </Col>
             ))}
           </Row>
