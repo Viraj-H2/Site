@@ -6,14 +6,26 @@ export default function Concept() {
       <Col className='text-center justify-content-center'>
         <h1>Notre concept</h1>
         <Image src='/assets/images/flow_diagram.png' className='img-fluid w-75' alt='Flow diagram' />
-        <p>
-          hasellus quis porttitor enim, at ullamcorper dui. Fusce id quam arcu. Suspendisse ultrices maximus rutrum. Sed elementum dui mi. Suspendisse purus leo, dapibus in nibh sed, pulvinar cursus sem. Donec aliquam felis sed turpis aliquet, sit amet pulvinar velit molestie. Donec convallis, ligula sed consectetur ultricies, massa enim interdum metus, vitae convallis erat velit quis massa. Donec et sem a elit tincidunt vehicula. Maecenas finibus sem nec sagittis imperdiet. Ut aliquam sit amet ipsum non lobortis. In nisl ipsum, efficitur non facilisis nec, sollicitudin id lacus. Pellentesque porttitor at elit at bibendum. Duis sit amet tellus sapien. Nulla ante eros, pharetra nec arcu eu, molestie semper ligula. Cras ut velit eu ante interdum pellentesque in vitae tellus.
+        <p className='mt-4'>
+          Notre <strong>architecture de propulsion hybride</strong> combine une <strong>pile à combustible</strong> et un <strong>turboprop à hydrogène</strong>. Cette approche a pour objectif de maximiser l'efficacité énergétique tout en réduisant le poids global du système de propulsion.
         </p>
         <p>
-          Suspendisse sit amet dictum velit. Donec fringilla enim faucibus, porta elit ac, rutrum nisi. Nulla efficitur faucibus hendrerit. Proin ullamcorper pulvinar massa eget viverra. Suspendisse cursus nec tellus non vehicula. Nullam sed feugiat tortor. Suspendisse sed bibendum felis. Sed eget odio mauris. Donec vitae lacus nibh. Suspendisse malesuada tortor nec vestibulum semper. Praesent laoreet velit felis, eu ornare quam elementum at. Fusce eu nibh condimentum, tristique diam eu, finibus magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac fermentum velit. Etiam posuere turpis augue, ac eleifend lacus pharetra ut. Fusce dignissim consectetur metus.
+          <strong>Stockage d'hydrogène (H₂ Tank)</strong> : L'hydrogène est stocké dans un réservoir, prêt à être utilisé par deux systèmes principaux : la pile à combustible et le turboprop.
         </p>
         <p>
-          Donec sit amet lectus sed leo ornare finibus a quis libero. Suspendisse commodo convallis ex, a cursus ante molestie a. Vestibulum eu ipsum sit amet lorem consectetur fringilla. In maximus dignissim malesuada. Nunc nunc elit, hendrerit eu vestibulum non, commodo quis libero. Praesent a nisi sit amet ligula ultricies sodales nec non massa. Praesent lectus tellus, posuere quis risus at, tristique porta tellus. Curabitur scelerisque ultricies sem vel consequat. Nunc accumsan, nulla et imperdiet pulvinar, nisl lacus efficitur tortor, vel convallis nunc ligula in risus. Sed viverra consequat felis, eu scelerisque lectus porta ultricies. Etiam efficitur hendrerit felis, nec blandit libero auctor sit amet. Nam leo leo, aliquam et sem sed, tempus accumsan ex.
+          <strong>Pile à Combustible (Fuel Cell)</strong> : La pile à combustible convertit l'hydrogène en électricité, alimentant une propulsion électrique (Elec. Propul) qui travaille en parallèle avec le turboprop. Elle génère également de l'eau qui est exploitée pour améliorer les performances du turboprop.
+        </p>
+        <p>
+          <strong>Système de Turboprop</strong> : L'hydrogène est aussi utilisé pour alimenter une turbine à gaz (Turbine), qui est ensuite couplée à un arbre (Turboshaft) pour produire de l'énergie mécanique (P méc.). Cette énergie est transférée à une boîte de vitesses (Gearbox) qui entraîne l’hélice (Prop).
+        </p>
+        <p>
+          <strong>Optimisation par la Gestion de l'Eau</strong> : L'eau produite par la pile à combustible est récupérée, condensée, puis réinjectée dans le système de turbomachine via un compresseur. Cette eau, sous forme de vapeur et de gouttelettes, permet d'améliorer les performances de la chambre de combustion (CC) et de la turbine, tout en optimisant la gestion thermique.
+        </p>
+        <p>
+          <strong>Échangeur de Chaleur (HEX)</strong> : L'échangeur de chaleur permet de récupérer de la chaleur issue des gaz d’échappement pour améliorer l'efficacité du système global, en réchauffant l'eau issu de la pile à combustible.
+        </p>
+        <p>
+          Nous appelons se système hybridation synergetique car il y a une hybridation mécanique via le turboprop et la propulsion électrique (moteur electrique - PAC), mais aussi, l'utilisation de l'eau de la pac pour la réinjecter dans la turbomachine. Ceci nous permet de concevoir un système de propulsion à la fois performant et économe, tout en limitant sont impact sur l'environnement en divisant par 10 les emmision de Nox.
         </p>
       </Col>
     </Container>

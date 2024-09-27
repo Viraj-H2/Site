@@ -44,7 +44,8 @@ export default function Team() {
       <Row className='m-5'>
         <Col className='border-top text-center justify-content-center'>
           <h2 className='m-4'>Nous rejoindre</h2>
-          <p className='m-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium euismod ligula. Fusce pretium interdum nisi, et malesuada enim congue ac. Proin eget eros vel risus porttitor vestibulum eget et enim. Ut pretium tellus nisi, a elementum dui blandit eget. Donec ornare pretium nunc a interdum. Fusce est dolor, finibus non purus vitae, egestas interdum augue. Duis non consectetur leo. Curabitur placerat luctus magna consectetur egestas.</p>
+          <p className='m-4'>Rejoindre notre équipe, c'est s'impliquer dans la création de nouvelles solutions de propulsion et relever les défis techniques de demain. Nous proposons un environnement de travail dynamique et collaboratif, où chaque talent joue un rôle essentiel.</p>
+         <p className='m-4'>Ensemble, construisons l'avenir de la mobilité aérienne.</p>
           <Button as='a' href='/careers' size='lg'>Postuler maintenant</Button>
         </Col>
       </Row>
