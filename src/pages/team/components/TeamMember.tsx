@@ -14,7 +14,7 @@ export default function TeamMember({ photo, name, position, linkedin }: TeamMemb
     <Card border='0' style={{ width: '18rem' }}>
       <Card.Img
         variant='top'
-        src={'/assets/images/team/' + photo}
+        src={'/team/images/' + photo}
         className='rounded-circle border border-2 mt-3'
       />
       <Card.Body>
