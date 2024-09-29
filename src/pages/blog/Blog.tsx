@@ -24,7 +24,7 @@ export default function Blog() {
                   </small>
                 </Card.Text>
                 <Link to={`/blog/${encodeURIComponent(post.title)}`}>
-                  <Button variant='primary'>Read More</Button>
+                  <Button variant='primary'>En savoir plus</Button>
                 </Link>
               </Card.Body>
             </Card>
