@@ -133,9 +133,13 @@ public
   "id": "Unique Job Identifier",
   "title": "Job Title",
   "department": "Department Name",
-  "description": "Job Description",
   "location": "Job Location",
-  "requirements": ["one", "or", "more", "requirements"]
+  "type": "Job Type",
+  "description": "Job Description",
+  "requirements": ["one", "or", "more", "requirements"],
+  "helloworkLink": "Optional Hellowork Link",
+  "indeedLink": "Optional Indeed Link",
+  "linkedinLink": "Optional LinkedIn Link"
 }
 ```
 
@@ -145,12 +149,13 @@ Suppose you want to add a new job offer with the following details:
 
 ```json
 {
-  "id": "job-1",
+  "id": "175631",
   "title": "Software Developer",
   "department": "Development",
   "description": "We are looking for a software developer to join our team!",
   "location": "Remote",
-  "requirements": ["Experience with JavaScript", "Experience with Node.js"]
+  "requirements": ["Experience with JavaScript", "Experience with Node.js"],
+  "linkedinLink": "https://www.linkedin.com/fake_job_link"
 }
 ```
 

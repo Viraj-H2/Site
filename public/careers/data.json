@@ -39,7 +39,10 @@
       "Maîtrise des outils de marketing digital et des réseaux sociaux",
       "Créativité et excellentes compétences rédactionnelles",
       "Connaissance de base des enjeux énergétiques et environnementaux"
-    ]
+    ],
+    "helloworkLink": "https://www.hellowork.com/fake_job_link",
+    "indeedLink": "https://fr.indeed.com/fake_job_link",
+    "linkedinLink": "https://www.linkedin.com/fake_job_link"
   },
   {
     "id": 4,
@@ -123,7 +126,8 @@
       "Première expérience en RH (stage) appréciée",
       "Maîtrise des outils bureautiques et des réseaux sociaux professionnels",
       "Sens de la confidentialité et excellentes compétences relationnelles"
-    ]
+    ],
+    "linkedinLink": "https://www.linkedin.com/fake_job_link"
   },
   {
     "id": 10,

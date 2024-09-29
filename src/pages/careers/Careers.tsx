@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Form, Accordion } from 'react-bootstrap';
 import Job from './components/Job';
+import { AccordionEventKey } from 'react-bootstrap/esm/AccordionContext';
 
 interface JobType {
   id: number;
@@ -10,6 +11,9 @@ interface JobType {
   type: string;
   description: string;
   requirements: string[];
+  helloworkLink?: string;
+  indeedLink?: string;
+  linkedinLink?: string;
 }
 
 export default function Careers() {
@@ -23,6 +27,7 @@ export default function Careers() {
     location: '',
     type: '',
   });
+  const [activeKey, setActiveKey] = useState<AccordionEventKey | null>(null);
 
   useEffect(() => {
     fetch('/careers/data.json')
@@ -45,9 +50,44 @@ export default function Careers() {
     setFilteredJobs(filtered);
   }, [filters, jobs]);
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        setActiveKey(hash);
+      } else {
+        setActiveKey(null);
+      }
+    };
+
+    // Handle initial load
+    handleHashChange();
+
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = event.target;
     setFilters(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleAccordionToggle = (eventKey: AccordionEventKey) => {
+    if (eventKey === activeKey) {
+      // If the same item is clicked, close it
+      setActiveKey(null);
+      window.history.pushState(null, '', '/careers');
+    } else {
+      setActiveKey(eventKey);
+      if (eventKey) {
+        window.history.pushState(null, '', `/careers#${eventKey}`);
+      }
+    }
   };
 
   return (
@@ -88,7 +128,7 @@ export default function Careers() {
         </Col>
       </Row>
       <Row className='mb-4'>
-        <Accordion>
+        <Accordion activeKey={activeKey} onSelect={handleAccordionToggle}>
           {filteredJobs.map(job => (
             <Job key={job.id} {...job} />
           ))}
