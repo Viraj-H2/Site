@@ -1,19 +1,26 @@
 import { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar as Bnavbar, Button, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon, faCircleHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import capitalize from '../../utils/capitalize';
 
 export default function Navbar() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const { theme, setTheme } = useContext(ThemeContext);
 
+  const themeOptions = [
+    { value: 'light', icon: faSun, label: 'Light' },
+    { value: 'dark', icon: faMoon, label: 'Dark' },
+    { value: 'auto', icon: faCircleHalfStroke, label: 'Auto' },
+  ];
+
   return (
     <Bnavbar {...(isHomePage ? { fixed: 'top' } : { sticky: 'top' })} expand='sm' bg='body'>
       <Container fluid>
         <Bnavbar.Brand as={Link} to='/'>
-          <img src='/assets/icons/favicon.svg' style={{ maxHeight: '40px' }} />
+          <img src='/assets/icons/favicon.svg' style={{ maxHeight: '40px' }} alt="Logo" />
         </Bnavbar.Brand>
         <Bnavbar.Toggle />
         <Bnavbar.Collapse className='justify-content-end'>
@@ -23,10 +30,24 @@ export default function Navbar() {
             <Nav.Link as={Link} to='/team'>L'équipe</Nav.Link>
             <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
             <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
-            <NavDropdown title={capitalize(theme)}>
-              <NavDropdown.Item onClick={() => setTheme('light')}>Light</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setTheme('dark')}>Dark</NavDropdown.Item>
-              <NavDropdown.Item onClick={() => setTheme('auto')}>Auto</NavDropdown.Item>
+            <NavDropdown 
+              key={theme} // Add this line to force re-render
+              title={
+                <FontAwesomeIcon 
+                  icon={themeOptions.find(option => option.value === theme)?.icon || faCircleHalfStroke}
+                  color='nav-link-color'
+                />
+              }
+            >
+              {themeOptions.map((option) => (
+                <NavDropdown.Item 
+                  key={option.value} 
+                  onClick={() => setTheme(option.value as 'light' | 'dark' | 'auto')}
+                >
+                  <FontAwesomeIcon icon={option.icon} className="me-2" color='nav-link-color' />
+                  {option.label}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
             <Button href='mailto:contact@viraj-h2.com?subject=Demande%20de%20contact' variant='outline-primary'>Nous contacter</Button>
           </Nav>
