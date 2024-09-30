@@ -1,12 +1,12 @@
 [
   {
-    "title": "Getting Started with React",
-    "description": "A beginner's guide to React development",
-    "authors": ["John Doe", "Jane Smith"],
-    "category": "Web Development",
-    "tags": ["React", "JavaScript", "Frontend"],
-    "date": "2024-01-01",
-    "content_dir": "getting_started_with_react",
-    "preview": "images/preview.jpg"
+    "title": "Newsletter n°1",
+    "description": "Ça avance chez Viraj H2, voici quelques mises à jour.",
+    "authors": ["Paul de Goÿs", "Joseph Risson"],
+    "category": "Newsletter",
+    "tags": ["Newsletter"],
+    "date": "15/05/2024",
+    "content_dir": "newsletter_1",
+    "preview": "images/preview.png"
   }
 ]

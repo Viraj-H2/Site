@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import Markdown from 'react-markdown';
 import Post from '../interfaces/Post';
 import { usePosts } from '../providers/PostsProvider';
@@ -40,7 +40,10 @@ export default function BlogPost() {
               {post.authors.join(', ')} | {post.date} | {post.category}
             </small>
           </p>
-          <Markdown>{content}</Markdown>
+          <Markdown
+            components={{
+            img: ({node, ...props}) => <Image {...props} fluid />
+          }}>{content}</Markdown>
           <div className='mt-4'>
             <strong>Tags: </strong>
             {post.tags.join(', ')}
