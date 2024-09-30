@@ -37,10 +37,7 @@ export default function Home() {
           </Row>
         </Col>
       </Row>
-      <Row id='concept' className='m-0 p-5'>
-        <Col className='border-top' />
-      </Row>
-      <Row className='m-0 mb-5'>
+      <Row id='concept' className='m-0 mb-5'>
         <Col className='text-center justify-content-evenly'>
           <Image src='/assets/images/concept.png' className='img-fluid w-75' alt='Concept' />
         </Col>
