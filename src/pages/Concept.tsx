@@ -1,33 +1,80 @@
-import { Col, Container, Image } from 'react-bootstrap';
+import { Container, Image } from 'react-bootstrap';
+import { FaChartLine,FaRecycle,  FaFeather, FaLeaf } from 'react-icons/fa';
+import './Concept.css'; // Assurez-vous d'avoir un fichier CSS associé pour les styles
 
 export default function Concept() {
   return (
-    <Container fluid>
-      <Col className='text-center justify-content-center'>
+    <Container fluid className="px-4 px-lg-5"> {/* Ajout du padding horizontal */}
+      <div className="text-center justify-content-center">
         <h1>Notre concept</h1>
-        <Image src='/assets/images/flow_diagram.png' className='img-fluid w-75' alt='Flow diagram' />
-        <p className='mt-4'>
-          Notre <strong>architecture de propulsion hybride</strong> combine une <strong>pile à combustible</strong> et un <strong>turboprop à hydrogène</strong>. Cette approche a pour objectif de maximiser l'efficacité énergétique tout en réduisant le poids global du système de propulsion.
-        </p>
-        <p>
-          <strong>Stockage d'hydrogène (H₂ Tank)</strong> : L'hydrogène est stocké dans un réservoir, prêt à être utilisé par deux systèmes principaux : la pile à combustible et le turboprop.
-        </p>
-        <p>
-          <strong>Pile à Combustible (Fuel Cell)</strong> : La pile à combustible convertit l'hydrogène en électricité, alimentant une propulsion électrique (Elec. Propul) qui travaille en parallèle avec le turboprop. Elle génère également de l'eau qui est exploitée pour améliorer les performances du turboprop.
-        </p>
-        <p>
-          <strong>Système de Turboprop</strong> : L'hydrogène est aussi utilisé pour alimenter une turbine à gaz (Turbine), qui est ensuite couplée à un arbre (Turboshaft) pour produire de l'énergie mécanique (P méc.). Cette énergie est transférée à une boîte de vitesses (Gearbox) qui entraîne l’hélice (Prop).
-        </p>
-        <p>
-          <strong>Optimisation par la Gestion de l'Eau</strong> : L'eau produite par la pile à combustible est récupérée, condensée, puis réinjectée dans le système de turbomachine via un compresseur. Cette eau, sous forme de vapeur et de gouttelettes, permet d'améliorer les performances de la chambre de combustion (CC) et de la turbine, tout en optimisant la gestion thermique.
-        </p>
-        <p>
-          <strong>Échangeur de Chaleur (HEX)</strong> : L'échangeur de chaleur permet de récupérer de la chaleur issue des gaz d’échappement pour améliorer l'efficacité du système global, en réchauffant l'eau issu de la pile à combustible.
-        </p>
-        <p>
-          Nous appelons se système hybridation synergetique car il y a une hybridation mécanique via le turboprop et la propulsion électrique (moteur electrique - PAC), mais aussi, l'utilisation de l'eau de la pac pour la réinjecter dans la turbomachine. Ceci nous permet de concevoir un système de propulsion à la fois performant et économe, tout en limitant sont impact sur l'environnement en divisant par 10 les emmision de Nox.
-        </p>
-      </Col>
+        <Image src="/assets/images/flow_diagram.png" className="img-fluid w-75" alt="Flow diagram" />
+
+        {/* Conteneur Flexbox pour aligner les colonnes */}
+        <div className="flex-container mt-5">
+          {/* Groupe Hybridation Intelligente (1/3 de la page) */}
+          <div className="hybridation-group">
+            <section className="about-section text-center" id="hybridation">
+              <div className="content">
+                <h2 className="section-title">Hybridation Intelligente</h2>
+                <div className="text-container">
+                  <span className="service-icon rounded-circle mx-auto mb-3 qualite">
+                    <FaChartLine />
+                  </span>
+                  <h4><strong>Complémentarité Technologique</strong></h4>
+                  <p className="text-faded mb-0">
+                    L’hybridation entre la pile à combustible et le turboprop optimise l’utilisation de chaque technologie en fonction des phases de vol. La pile est efficace en croisière, tandis que le turboprop fournit la puissance au décollage et à la montée.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          {/* Groupe Synergie (2/3 de la page) */}
+          <div className="synergie-group">
+            <section className="about-section text-center" id="synergie">
+              <div className="content">
+                <h2 className="section-title">Synergie - Par l'injection de vapeur</h2>
+                <div className="synergie-subsections"> {/* Nouveau conteneur pour les sous-sections */}
+                  <div className="text-container">
+                    <span className="service-icon rounded-circle mx-auto mb-3 qualite">
+                      <FaRecycle />
+                    </span>
+                    <h4><strong>Augmentation de l’Efficacité</strong></h4>
+                    <p className="text-faded mb-0">
+                      La vapeur récupère la chaleur perdue dans les gaz d’échappement, augmentant ainsi le rendement thermique du système.
+                    </p>
+                  </div>
+
+                  <div className="text-container">
+                    <span className="service-icon rounded-circle mx-auto mb-3 qualite">
+                      <FaFeather />
+                    </span>
+                    <h4><strong>Augmentation de la Densité de Puissance</strong></h4>
+                    <p className="text-faded mb-0">
+                      L’injection de vapeur dans la turbomachine accroît la puissance en augmentant le débit massique, optimisant ainsi le rapport puissance/poids.
+                    </p>
+                  </div>
+
+                  <div className="text-container">
+                    <span className="service-icon rounded-circle mx-auto mb-3 qualite">
+                      <FaLeaf />
+                    </span>
+                    <h4><strong>Réduction des NOx</strong></h4>
+                    <p className="text-faded mb-0">
+                      L’injection de vapeur réduit significativement les émissions de NOx, améliorant les performances énergétiques et réduisant l'impact environnemental.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        {/* Image concept */}
+        <div className="content-section-heading concept-img mt-5">
+          <img src="assets/images/Concept_Described.png" alt="Hybridation Concept" width="70%" />
+        </div>
+      </div>
     </Container>
   );
 }
