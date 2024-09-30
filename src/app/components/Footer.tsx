@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import ContactEmail from '../../common/components/ContactEmail';
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -51,9 +52,7 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faEnvelope} className='me-2' />
               </Col>
               <Col className='d-flex align-items-center'>
-                <a href='mailto:contact@viraj-h2.com' className='text-decoration-none'>
-                  <b>contact@viraj-h2.com</b>
-                </a>
+                <ContactEmail />
               </Col>
               </Row>
           </Col>
