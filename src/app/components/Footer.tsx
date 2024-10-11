@@ -15,17 +15,17 @@ export default function Footer() {
   ];
 
   return (
-    <footer className='py-4 border-top'>
-      <Container>
-        <Row className='m-0 justify-content-between'>
-          <Col className='mb-3'>
+    <footer>
+      <Container fluid className='p-4 border-top'>
+        <Row className='m-2 justify-content-between'>
+          <Col lg={6} className='mb-3'>
             <h5 className='text-uppercase mb-3'>Coordonnées</h5>
-            <Row>
-              <Col xs={1} className='d-flex align-items-center'>
-                <FontAwesomeIcon icon={faMapMarkerAlt} className='ms-3' />
+            <Row className='mb-2'>
+              <Col xs='auto' className='pe-2'>
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
               </Col>
-              <Col className='d-flex align-items-left'>
-                <address>
+              <Col>
+                <address className='mb-0'>
                   <b>Viraj H2</b><br />
                   10 Avenue Edouard Belin<br />
                   31400 Toulouse<br />
@@ -34,16 +34,16 @@ export default function Footer() {
               </Col>
             </Row>
             <Row>
-              <Col xs={1} className='d-flex align-items-center'>
-                <FontAwesomeIcon icon={faEnvelope} className='ms-3' />
+              <Col xs='auto' className='pe-2'>
+                <FontAwesomeIcon icon={faEnvelope} />
               </Col>
-              <Col className='d-flex align-items-center'>
+              <Col>
                 <ContactEmail />
               </Col>
-              </Row>
+            </Row>
           </Col>
 
-          <Col>
+          <Col lg={4}>
             <h5 className='text-uppercase mb-3'>LIENS</h5>
             <Nav className='flex-column'>
               {links.map((link) => (
@@ -57,7 +57,7 @@ export default function Footer() {
           </Col>
         </Row>
 
-        <Row className="border-top py-3 mt-4 align-items-center">
+        <Row className="border-top py-3 m-4 align-items-center">
           <Col xs={12} sm className="text-center text-sm-start mb-2 mb-sm-0">
             <p className="mb-0">&copy; 2024 Viraj H2. Tous droits réservés.</p>
           </Col>
