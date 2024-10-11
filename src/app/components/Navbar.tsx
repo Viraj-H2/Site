@@ -47,7 +47,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Bnavbar {...(isHomePage ? { fixed: 'top' } : { sticky: 'top' })} expand='sm' bg='body'>
+      <Bnavbar {...(isHomePage ? { fixed: 'top' } : { sticky: 'top' })} expand='md' bg='body'>
         <Container fluid>
           <Bnavbar.Brand as={Link} to='/'>
             <img src='/assets/icons/favicon.svg' style={{ maxHeight: '40px' }} alt='Logo' />
