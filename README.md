@@ -8,7 +8,7 @@ A modern website for Viraj H2!
 - Node.js (v20.x or higher)
 - npm (v10.x or higher)
 
-## How to build
+## How to run locally
 
 1. Clone the repository:
 ```bash
@@ -23,12 +23,22 @@ npm install
 
 3. Start the development server:
 ```bash
+npm run dev
 ```
 
 4. Open your browser and go to:
 ```bash
 http://localhost:5173
 ```
+
+## How to deploy
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Copy the contents of the `dist` directory to your web server.
 
 ## How to add posts
 ### Instructions
