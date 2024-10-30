@@ -1,0 +1,53 @@
+[
+  {
+    "sectionTitle": "L'équipe fondatrice",
+    "members": [
+      {
+        "photo": "paul_de_goys.png",
+        "name": "Paul de Goÿs",
+        "position": "Cofondateur - CEO",
+        "linkedin": "paul-de-goÿs-967b12187"
+      },
+      {
+        "photo": "joseph_risson.png",
+        "name": "Joseph Risson",
+        "position": "Cofondateur - CTO",
+        "linkedin": "joseph-risson"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "L'équipe actuelle",
+    "members": [
+      {
+        "photo": "maurane_suhas.png",
+        "name": "Maurane Suhas",
+        "position": "Alternante",
+        "linkedin": "maurane-suhas-%C3%A9tudiant-stagiaire-physique-chimie-noum%C3%A9a-nouvelle-cal%C3%A9donie"
+      },
+      {
+        "photo": "adrien_soursou.png",
+        "name": "Adrien Soursou",
+        "position": "Stagiaire",
+        "linkedin": "adrien-soursou"
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Les alumnis",
+    "members": [
+      {
+        "photo": "jules_fleury.png",
+        "name": "Jules Fleury",
+        "position": "Stagiaire",
+        "linkedin": "jules-fleury-3a0974251"
+      },
+      {
+        "photo": "maik_rotzoll.png",
+        "name": "Maïk Rotzoll",
+        "position": "Stagiaire",
+        "linkedin": "maik-rotzoll-p314159"
+      }
+    ]
+  }
+]
