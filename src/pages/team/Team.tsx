@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import TeamMember from './components/TeamMember';
+import { Link } from 'react-router-dom';
 
 interface TeamMemberData {
   photo: string;
@@ -45,8 +46,12 @@ export default function Team() {
         <Col className='border-top text-center justify-content-center'>
           <h2 className='m-4'>Nous rejoindre</h2>
           <p className='m-4'>Rejoindre notre équipe, c'est s'impliquer dans la création de nouvelles solutions de propulsion et relever les défis techniques de demain. Nous proposons un environnement de travail dynamique et collaboratif, où chaque talent joue un rôle essentiel.</p>
-         <p className='m-4'>Ensemble, construisons l'avenir de la mobilité aérienne.</p>
-          <Button as='a' href='/careers' size='lg'>Postuler maintenant</Button>
+          <p className='m-4'>Ensemble, construisons l'avenir de la mobilité aérienne.</p>
+          <Link to="/careers" >
+            <Button size='lg'>
+              Postuler maintenant
+            </Button>
+          </Link >
         </Col>
       </Row>
     </Container>
