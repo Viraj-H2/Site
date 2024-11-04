@@ -1,5 +1,5 @@
 name: Deploiement sur Github pages
-
+permissions: write-all
 on:
   push:
     branches:
