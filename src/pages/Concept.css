@@ -1,0 +1,66 @@
+/* Conteneur Flexbox pour la mise en page */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Assurer l'espacement entre les colonnes */
+    align-items: stretch; /* Forcer les colonnes à avoir la même hauteur */
+    gap: 20px; /* Espace entre les deux colonnes */
+  }
+  
+  /* Colonne Hybridation Intelligente (1/3 de la largeur) */
+  .hybridation-group {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 30%; /* 30% de la largeur pour Hybridation */
+    border: 2px solid #2196F3; /* Bleu pour Hybridation */
+    background-color: rgba(33, 150, 243, 0.1); /* Bleu fade */
+  }
+  
+  /* Colonne Synergie (2/3 de la largeur) */
+  .synergie-group {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 65%; /* 65% de la largeur pour Synergie */
+    border: 2px solid #4CAF50; /* Vert pour Synergie */
+    background-color: rgba(76, 175, 80, 0.1); /* Vert fade */
+  }
+  
+  /* Conteneur interne Flexbox pour aligner les sous-sections sur une ligne en desktop */
+  .synergie-subsections {
+    display: flex;
+    flex-wrap: wrap; /* Responsif : empiler les sous-sections sur petits écrans */
+    justify-content: space-between; /* Espace entre les sous-sections */
+    gap: 20px; /* Espace entre chaque sous-section */
+  }
+  
+  /* Chaque sous-section à l'intérieur de Synergie */
+  .synergie-group .text-container {
+    flex: 1 1 calc(33.33% - 20px); /* Occuper 1/3 de la largeur de la colonne Synergie */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optionnel: un peu de style pour chaque bloc */
+  }
+  
+  /* Styles pour le contenu */
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+  }
+  
+  .text-container {
+    margin-bottom: 30px;
+  }
+  
