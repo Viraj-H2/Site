@@ -23,7 +23,9 @@ export default function Blog() {
                     {post.authors.join(', ')} | {post.date}
                   </small>
                 </Card.Text>
-                <Link to={`/blog/${encodeURIComponent(post.title)}`}>
+                <Link to={`/blog/${encodeURIComponent(post.title)}`}
+                  onClick={() => console.log(`Navigating to: /blog/${encodeURIComponent(post.title)}`)}
+                >
                   <Button variant='primary'>En savoir plus</Button>
                 </Link>
               </Card.Body>

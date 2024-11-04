@@ -4,17 +4,17 @@ import Markdown from 'react-markdown';
 import Post from '../interfaces/Post';
 import { usePosts } from '../providers/PostsProvider';
 import Error404 from '../../Error404';
+import { useParams } from 'react-router-dom';
 
 export default function BlogPost() {
   const { posts } = usePosts();
+  const { title } = useParams()
   const [post, setPost] = useState<Post | null>(null);
   const [content, setContent] = useState('');
 
   useEffect(() => {
-    const encodedTitle = window.location.pathname.split('/').pop();
-    if (!encodedTitle) return;
-    const targetTitle = decodeURIComponent(encodedTitle);
-    const targetPost = posts.find(post => post.title === targetTitle);
+    if (!title) return;
+    const targetPost = posts.find(post => post.title === title);
     if (targetPost) {
       setPost(targetPost);
       fetch(`/blog/${targetPost.content_dir}/post.md`)
@@ -42,8 +42,8 @@ export default function BlogPost() {
           </p>
           <Markdown
             components={{
-            img: ({node, ...props}) => <Image {...props} fluid />
-          }}>{content}</Markdown>
+              img: ({ node, ...props }) => <Image {...props} fluid />
+            }}>{content}</Markdown>
           <div className='mt-4'>
             <strong>Tags: </strong>
             {post.tags.join(', ')}
