@@ -1,9 +1,10 @@
 name: Deploiement sur Github pages
+
 permissions: write-all
 on:
   push:
     branches:
-      - deploy_github_pages
+      - main
 
 jobs:
   build:
@@ -33,7 +34,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/deploy_github_pages'
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Download artifact
