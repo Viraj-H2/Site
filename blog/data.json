@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Newsletter n°1",
+    "description": "Ça avance chez Viraj H2, voici quelques mises à jour.",
+    "authors": ["Paul de Goÿs", "Joseph Risson"],
+    "category": "Newsletter",
+    "tags": ["Newsletter"],
+    "date": "15/05/2024",
+    "content_dir": "newsletter_1",
+    "preview": "images/preview.png"
+  }
+]
