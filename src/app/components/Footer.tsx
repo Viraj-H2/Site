@@ -9,9 +9,7 @@ export default function Footer() {
   const links = [
     { to: '/', text: 'Accueil' },
     { to: '/concept', text: 'Notre concept' },
-    { to: '/team', text: "L'équipe" },
     { to: '/careers', text: 'Carrières' },
-    { to: '/blog', text: 'Blog' }
   ];
 
   return (

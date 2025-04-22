@@ -57,9 +57,7 @@ export default function Navbar() {
             <Nav>
               <Nav.Link as={Link} to='/'>Accueil</Nav.Link>
               <Nav.Link as={Link} to='/concept'>Notre concept</Nav.Link>
-              <Nav.Link as={Link} to='/team'>L'équipe</Nav.Link>
               <Nav.Link as={Link} to='/careers'>Carrières</Nav.Link>
-              <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
               <NavDropdown key={theme}
                 title={
                   <FontAwesomeIcon 
